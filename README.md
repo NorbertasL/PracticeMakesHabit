@@ -13,3 +13,7 @@ Example:You want to read more books.So your daily task would be to read 5 min a 
 sounds like nothing and that is the point. It sounds easy, so it is easy to start.Once you have done you 5 min
 you are free to keep on reading until the end of the chapter, or until you get tired.The 5 min minimal is 
 there to get you started and to trick the brain into doing something productive.
+
+## GUI Design
+For the GUI I will be using JavaFX and IntelliJ Scene Builder.
+If you want to learn how to set it up [Click Here](https://www.jetbrains.com/help/idea/javafx.html#vm-options)
