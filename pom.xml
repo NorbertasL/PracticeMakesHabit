@@ -8,5 +8,16 @@
     <artifactId>PracticeMakesHabit</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.32.3</version>
+        </dependency>
+    </dependencies>
+    <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+
+
 
 </project>
