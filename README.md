@@ -18,12 +18,14 @@ there to get you started and to trick the brain into doing something productive.
 ##Technical information
 
 ## Dependencies
-* SQLite - Used for storing data on local machine
-    * [SQLite Stand Alone.](https://www.sqlite.org/download.html)
+* [SQLite](https://www.sqlite.org/index.html) - Used for storing data on local machine
     * [SQLite MVN Repo(Used in this project).](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc/3.32.3)
     * [Tutorials on how to use it.](https://www.sqlitetutorial.net/sqlite-java/)
-
-
+* [Lombok](https://projectlombok.org/) - Easy annotations
+    * [Lombok MVN Repo](https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.12)
+    * [Plugin for IntelliJ](https://projectlombok.org/setup/intellij)
+    * [Configure annotation processors](https://www.jetbrains.com/help/idea/annotation-processors-support.html)
+    * [Features](https://projectlombok.org/features/all)
 ### GUI Design
 For the GUI I will be using JavaFX and IntelliJ Scene Builder.
 If you want to learn how to set it up [Click Here](https://www.jetbrains.com/help/idea/javafx.html#vm-options)
