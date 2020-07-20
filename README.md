@@ -26,7 +26,7 @@ there to get you started and to trick the brain into doing something productive.
     * [Plugin for IntelliJ](https://projectlombok.org/setup/intellij)
     * [Configure annotation processors](https://www.jetbrains.com/help/idea/annotation-processors-support.html)
     * [Features](https://projectlombok.org/features/all)
-### GUI Design
-For the GUI I will be using JavaFX and IntelliJ Scene Builder.
+### gui Design
+For the gui I will be using JavaFX and IntelliJ Scene Builder.
 If you want to learn how to set it up [Click Here](https://www.jetbrains.com/help/idea/javafx.html#vm-options)
 
