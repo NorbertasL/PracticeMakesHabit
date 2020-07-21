@@ -7,19 +7,29 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-//https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm
 
 public class LogInController extends Application {
+    Parent root;
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/logIn.fxml"));
-        Scene scene = new Scene(root, 300,200);
+        root = FXMLLoader.load(getClass().getResource("/fxml/logIn.fxml"));
+        Scene scene = new Scene(root);
+        stage.setResizable(false);
         stage.setTitle("Log In...");
         stage.setScene(scene);
         stage.show();
 
     }
 
-    public void handleSubmitButtonAction(ActionEvent actionEvent) {
+    public void newUserAction(ActionEvent actionEvent) {
+        System.out.println("New User");
+    }
+
+    public void passwordResetAction(ActionEvent actionEvent) {
+        System.out.println("Password Reset");
+    }
+
+    public void logInBtnAction(ActionEvent actionEvent) {
+        System.out.println("Log in !!!");
     }
 }
