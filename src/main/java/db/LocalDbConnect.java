@@ -1,12 +1,17 @@
 package db;
 
+import java.io.File;
 import java.sql.*;
 
 public class LocalDbConnect {
     private static final String DB_NAME = "tasks.db";
     private static String url = "jdbc:sqlite:" + DB_NAME;
-
-    public static void connect(){
+    public static void createdLocalDatabase(){
+        File tmpDir = new File("./"+DB_NAME);
+        if(tmpDir.exists()){
+            System.out.printf("The database %s exists.%n", DB_NAME);
+            return;
+        }
         try (Connection conn = DriverManager.getConnection(url)) {
             if (conn != null) {
                 DatabaseMetaData meta = conn.getMetaData();
@@ -17,7 +22,6 @@ public class LocalDbConnect {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
     }
     public static void createNewTable(Tables table){
         // SQL statement for creating a new table
@@ -35,7 +39,7 @@ public class LocalDbConnect {
             System.out.println(e.getMessage());
         }
     }
-    public static void insert(Tables table,String task, int time, String colour) {
+    public static void insertNewTask(Tables table,String task, int time, String colour) {
         final String INSERT_SQL = "INSERT INTO "+table.name()+"(task,alertTime,colour) VALUES(?,?,?)";
 
         try (Connection conn = DriverManager.getConnection(url);
@@ -53,8 +57,9 @@ public class LocalDbConnect {
     }
 
     public enum Tables{
-        DAILY,
-        WEEKLY
+        DAILY_TASKS,
+        DAILY_TASK_TRACKER
+
     }
 
 }
