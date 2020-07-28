@@ -1,16 +1,22 @@
+import data.Task;
 import db.LocalDbConnect;
 import gui.LogInController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 
 public class Main extends Application {
     public static void main(String[] args) {
         startUp();
+        ArrayList<Task> tasks = LocalDbConnect.getTasksList();
+        for (Task t : tasks){
+            t.printData();
+        }
 
     }
 
-    @Override
     public void start(Stage stage) throws Exception {
         new LogInController().start(stage);
     }

@@ -1,7 +1,10 @@
 package db;
 
+import data.Task;
+
 import java.io.File;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class LocalDbConnect {
     private static final String DB_NAME = "tasks.db";
@@ -54,6 +57,24 @@ public class LocalDbConnect {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+    public static ArrayList<Task> getTasksList(){
+        String sql = "SELECT * FROM "+ Tables.DAILY_TASKS.name();
+        ArrayList<Task> returnList = new ArrayList<>();
+        try (Connection conn = DriverManager.getConnection(url);
+             Statement stmt  = conn.createStatement();
+             ResultSet rs    = stmt.executeQuery(sql)){
+            // loop through the result set
+            while (rs.next()) {
+                returnList.add(new Task(rs.getInt("id")
+                        ,rs.getString("task")
+                        , rs.getInt("alertTime")
+                        , rs.getString("colour")));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return returnList;
     }
 
     public enum Tables{
