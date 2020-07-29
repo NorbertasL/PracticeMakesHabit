@@ -13,4 +13,7 @@ public class Task {
     public void printData(){
         System.out.println(id+":"+taskName+":"+alertTime+":"+hexColour);
     }
+    public String getDataString(){
+        return id+":"+taskName+":"+alertTime+":"+hexColour;
+    }
 }

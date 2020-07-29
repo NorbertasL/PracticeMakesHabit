@@ -1,6 +1,7 @@
 import data.Task;
 import db.LocalDbConnect;
 import gui.LogInController;
+import gui.TaskListController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -10,15 +11,11 @@ import java.util.ArrayList;
 public class Main extends Application {
     public static void main(String[] args) {
         startUp();
-        ArrayList<Task> tasks = LocalDbConnect.getTasksList();
-        for (Task t : tasks){
-            t.printData();
-        }
-
+        launch(args);
     }
 
     public void start(Stage stage) throws Exception {
-        new LogInController().start(stage);
+        new TaskListController().start(stage);
     }
     private static void startUp(){
         //Creating DB and Tables
