@@ -58,6 +58,21 @@ public class LocalDbConnect {
             System.out.println(e.getMessage());
         }
     }
+    public static void delete(Tables table, int id){
+        String sql = "DELETE FROM "+table.name() +" WHERE id = ?";
+
+        try (Connection conn = DriverManager.getConnection(url);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // set the corresponding param
+            pstmt.setInt(1, id);
+            // execute the delete statement
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
     public static ArrayList<Task> getTasksList(){
         String sql = "SELECT * FROM "+ Tables.DAILY_TASKS.name();
         ArrayList<Task> returnList = new ArrayList<>();
