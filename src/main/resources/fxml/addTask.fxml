@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 
 
-<AnchorPane prefHeight="209.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AddTaskController">
+<AnchorPane  fx:controller="gui.AddTaskController" prefHeight="209.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="67.0" layoutY="154.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="89.0" text="Add Task" />
       <Button layoutX="177.0" layoutY="154.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Cancel" />

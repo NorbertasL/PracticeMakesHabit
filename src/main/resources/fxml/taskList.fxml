@@ -4,7 +4,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="gui.TaskListController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TabPane prefHeight="373.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -27,6 +28,6 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="648.0" text="Add new task!" />
+      <Button mnemonicParsing="false" onAction="#onAddNewTaskClick" prefHeight="25.0" prefWidth="648.0" text="Add new task!" />
    </children>
 </VBox>
